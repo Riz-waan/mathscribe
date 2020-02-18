@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sortable Test</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="jquery.js"></script>
+        <script src="domimg.js"></script>
+        <script src="filesaver.js"></script>
+
+    </head>
+    <body>
+
+        <div id="header">
+
+            <div id="items">
+
+                <div class="SidebarElement columnone" id="1">
+                    1
+                </div>
+
+                <div class="SidebarElement columnone" id="2">
+                    2
+                </div>
+
+                <div class="SidebarElement columnone" id="3">
+                    3
+                </div>
+
+                <div class="SidebarElement columnone" id="4">
+                    4
+                </div>
+
+                <div class="SidebarElement columnone" id="5">
+                    5
+                </div>
+
+                <div class="SidebarElement columnone" id="6">
+                    6
+                </div>
+
+                <div class="SidebarElement columnone" id="7">
+                    7
+                </div>
+
+                <div class="SidebarElement columnone" id="8">
+                    8
+                </div>
+
+                <div class="SidebarElement columnone" id="9">
+                    9
+                </div>
+
+                <div class="SidebarElement columnone" id="0">
+                    0
+                </div>
+
+                <div class="SidebarElement columntwo" id="add">
+                    &plus;
+                </div>
+
+                <div class="SidebarElement columntwo" id="subtract">
+                    &#x2D;
+                </div>
+
+                <div class="SidebarElement columntwo" id="times">
+                    &#x2A09;
+                </div>
+
+                <div class="SidebarElement columntwo" id="divide">
+                    &div;
+                </div>
+
+                <div class="SidebarElement columntwo" id="equal">
+                    &equals;
+                </div>
+
+                <div class="SidebarElement columntwo" id="paropen">
+                    &lpar;
+                </div>
+
+                <div class="SidebarElement columntwo" id="paraclose">
+                    &rpar;
+                </div>
+
+                <div class="SidebarElement columntwo" id="percent">
+                    &percnt;
+                </div>
+
+                <div class="SidebarElement columntwo" id="approx">
+                    &thickapprox;
+                </div>
+
+                <div class="SidebarElement columntwo" id="var">
+                    x
+                </div>
+            </div>
+
+            <div id="pdf">
+
+                <div>Download</div>
+            </div>
+
+            <div id="items3">
+
+                <div>Delete</div>
+            </div>
+
+        </div>
+
+        <div id="items2">
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+
+            <div>&nbsp;</div>
+        </div>
+        <br>
+
+        <script src="sortable.js"></script>
+        <script>
+            var el = document.getElementById('items');
+            var sortable = Sortable.create(el, {
+                replace: true,
+                replaceClass: "john",
+                sort: false,
+                group: {
+                    name: "hi",
+                    pull: "clone",
+                    put: false
+                },
+                onClone: function(evt) {
+                    var origEl = evt.item;
+                    var cloneEl = evt.clone;
+                    cloneEl.style.display = "none";
+                }
+            });
+
+            var el2 = document.getElementById('items2');
+            var sortable = Sortable.create(el2, {
+                replace: true,
+                replaceClass: "john",
+                sort: false,
+                group: {
+                    name: "grid",
+                    pull: "clone",
+                    put: ['hi']
+                },
+                onAdd: function(evt) {
+                    evt.item.style.display = null;
+                },
+                onClone: function(evt) {
+                    var origEl = evt.item;
+                    var cloneEl = evt.clone;
+                    //origEl.style.display = "none";
+                    cloneEl.style.display = "none";
+                },
+                onMove: function(evt, originalEvent) {
+                    evt.dragged.style.display = "none";
+                },
+                onEnd: function(evt) {
+                    evt.item.style.display = null;
+                    evt.clone.style.display = null;
+                },
+                onUpdate: function(evt) {
+                    evt.item.style.display = null;
+                    evt.clone.style.display = null;
+                }
+            });
+
+            var el3 = document.getElementById('items3');
+            var sortable = Sortable.create(el3, {
+                group: {
+                    name: "delete",
+                    pull: "none",
+                    put: ['grid']
+                },
+                replace: true,
+                replaceClass: "john",
+                onAdd: function(evt) {
+                    evt.clone.style.display = null;
+                    evt.item.textContent = "Delete";
+                    evt.clone.textContent = "\xa0";
+                }
+            });
+
+            var node = document.getElementById('items2');
+            var btn = document.getElementById('pdf');
+
+            btn.onclick = function() {
+                domtoimage
+                    .toBlob(document.getElementById('items2'))
+                    .then(function(blob) {
+                        window.saveAs(blob, 'MathScribe.png');
+                    });
+            }
+        </script>
+</html>
